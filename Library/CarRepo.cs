@@ -44,8 +44,10 @@ namespace Library
             return null;
         }
 
-       
+        public List<Car> GetAllCars()
+        {
+            return _carRepo.Values.ToList();
+        }
 
-        
     }
 }

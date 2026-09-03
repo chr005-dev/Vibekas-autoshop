@@ -4,7 +4,36 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <h1>Cars for Sale</h1>
+
+    @if (Model.CarsForSale.Any())
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Maker</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var car in Model.CarsForSale)
+                {
+                    <tr>
+                        <td>@car.Maker</td>
+                        <td>@car.Model</td>
+                        <td>@car.Year</td>
+                        <td>@car.Price.ToString("C")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No cars for sale at the moment.</p>
+    }
 </div>
+
