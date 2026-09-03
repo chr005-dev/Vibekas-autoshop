@@ -9,19 +9,21 @@ namespace Library
         private int carId = 1;
         private Dictionary<int, Car> _carRepo = new Dictionary<int, Car>();
 
-     public CarRepo()
+        public CarRepo()
         {
-            _carRepo.Add(carId, new Car("Toyota", "Camry", 2020));
-            _carRepo.Add(++carId, new Car("Honda", "Civic", 2019));
-            _carRepo.Add(++carId, new Car("Ford", "Mustang", 2021));
-            _carRepo.Add(++carId, new Car("Itoren", "C1", 2006));
+            _carRepo.Add(carId, new Car("Toyota", "Camry", 2020, 25000, true));
+            _carRepo.Add(++carId, new Car("Honda", "Civic", 2019, 20000, true));
+            _carRepo.Add(++carId, new Car("Ford", "Mustang", 2021, 40000, true));
+            _carRepo.Add(++carId, new Car("Itoren", "C1", 2006, 5000, false));
         }   
 
 
 
-        public void AddCar(Car car)
+        public Car Create(string name, string model, int year, decimal price, bool forSale)
         {
+            Car car = new Car(name, model, year, price, forSale);
             _carRepo.Add(++carId, car);
+            return car;
         }
 
         public List<Car> carsForSale = new List<Car>();

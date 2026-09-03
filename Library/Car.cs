@@ -8,11 +8,13 @@
         public bool ForSale { get; set; }
         public decimal Price { get; set; }
 
-        public Car(string maker, string model, int year)
+        public Car(string maker, string model, int year, decimal price, bool forSale)
         {
             Maker = maker;
             Model = model;
             Year = year;
+            Price = price;
+            ForSale = forSale;
         }
         public override string ToString()
         {

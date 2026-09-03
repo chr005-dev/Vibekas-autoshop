@@ -1,0 +1,39 @@
+﻿@page
+@model Vibekas_autoshop.Pages.Adminworks.CreateModel
+@{
+    <h3>Create</h3>
+    <form method="post">
+        <div class="mb-3">
+            <label asp-for="Input.Name" class="form-label"></label>
+            <input asp-for="Input.Name" class="form-control" />
+            <span asp-validation-for="Input.Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Input.Price" class="form-label"></label>
+            <input asp-for="Input.Price" class="form-control" />
+            <span asp-validation-for="Input.Price" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Input.model" class="form-label"></label>
+            <textarea asp-for="Input.model" class="form-control"></textarea>
+            <span asp-validation-for="Input.model" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Input.year" class="form-label"></label>
+            <input asp-for="Input.year" class="form-control" />
+            <span asp-validation-for="Input.year" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Input.Maker" class="form-label"></label>
+            <input asp-for="Input.Maker" class="form-control" />
+            <span asp-validation-for="Input.Maker" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Input.ForSale" class="form-label"></label>
+            <input asp-for="Input.ForSale" type="checkbox" class="form-check-input" />
+            <span asp-validation-for="Input.ForSale" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-page="/Index" class="btn btn-secondary">Back</a>
+    </form>
+}

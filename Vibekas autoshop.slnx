@@ -2,5 +2,5 @@
   <Project Path="Library/Library.csproj" />
   <Project Path="UnitTest/UnitTest.csproj" />
   <Project Path="Vibekas autoshop/Vibekas autoshop.csproj" />
-  <Project Path="Vibekasautoshop/Vibekasautoshop.csproj" Id="28f4167f-1dca-40e9-9d94-7d3920c3b675" />
+  <Project Path="Vibekasautoshop/Vibekasautoshop.csproj" />
 </Solution>
