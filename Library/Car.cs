@@ -6,6 +6,7 @@
         public string Model { get; set; }
         public int Year { get; set; }
         public bool ForSale { get; set; }
+        public decimal Price { get; set; }
 
         public Car(string maker, string model, int year)
         {
